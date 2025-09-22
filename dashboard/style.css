@@ -1,0 +1,296 @@
+:root {
+  --primary-color: #0D2364;
+  --accent-color: #ffffff;
+  --hover-color: #1a3a8c;
+  --border-color: #ccc;
+  --error-color: #e74c3c;
+  --success-color: #2ecc71;
+  --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+  --edit-blue: #007bff;
+  --edit-blue-hover: #0056b3;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-family);
+  background-color: #f4f6fa;
+  color: #333;
+}
+
+/* Navigation bar styling */
+.nav-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  background-color: var(--primary-color);
+  list-style: none;
+  margin: 0;
+}
+
+.nav-btn {
+  background-color: #ffffff;
+  color: var(--primary-color);
+  text-decoration: none;
+  border: none;
+  padding: 0.8rem 2rem;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.nav-btn:hover,
+.nav-btn.active {
+  background-color: var(--hover-color);
+  color: #fff;
+}
+
+/* Headings */
+h2 {
+  color: var(--primary-color);
+  margin-bottom: 2rem;
+  text-align: center;
+  font-size: 1.8rem;
+}
+
+/* Page visibility */
+section.page {
+  display: none;
+  padding: 2rem;
+}
+
+section.page.active {
+  display: block;
+}
+
+/* Register page */
+#register.page {
+  display: none;
+  max-width: 600px;
+  background-color: #fff;
+  padding: 3rem;
+  margin: 2rem auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+}
+
+#register.page.active {
+  display: block;
+}
+
+/* Edit page styling (same as register) */
+.edit-style {
+  max-width: 600px;
+  background-color: #fff;
+  padding: 3rem;
+  margin: 2rem auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Logs and Users */
+#logs.page,
+#userData.page {
+  padding: 2rem;
+  background-color: transparent;
+}
+
+/* Form */
+#registerForm,
+#editForm {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  width: 100%;
+}
+
+label {
+  font-weight: bold;
+  color: var(--primary-color);
+  margin-bottom: 0.3rem;
+}
+
+input,
+select {
+  padding: 0.8rem;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  font-size: 1rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+input:focus,
+select:focus {
+  border-color: var(--primary-color);
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(13, 35, 100, 0.1);
+}
+
+/* Submit Button */
+button {
+  background-color: var(--primary-color);
+  color: var(--accent-color);
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: var(--hover-color);
+}
+
+/* Form actions container */
+.form-actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+/* Tables */
+table {
+  width: 100%;
+  max-width: 1200px;
+  margin: 1rem auto;
+  border-collapse: collapse;
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+th,
+td {
+  padding: 1rem;
+  border-bottom: 1px solid var(--border-color);
+  text-align: left;
+}
+
+thead th {
+  background-color: var(--primary-color);
+  color: var(--accent-color);
+  font-weight: 600;
+}
+
+tbody tr:hover {
+  background-color: #f8f9fa;
+}
+
+/* --- TOOLBAR --- */
+.table-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1rem auto;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.table-toolbar h2 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: var(--primary-color);
+}
+
+/* --- SEARCH FIX --- */
+.table-search {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.table-search-input {
+  width: 300px;
+  display: flex;
+  align-items: center;
+  margin-right: 130px;
+}
+
+/* --- ACTION BUTTONS --- */
+.action-buttons {
+  display: flex;
+  gap: 0.5rem;
+}
+
+/* Shared button styles */
+.edit-btn,
+.delete-btn,
+.save-btn,
+.cancel-btn,
+.update-btn {
+  border: none;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  color: #fff;
+  padding: 0.6rem 1.2rem;
+}
+
+/* Edit */
+.edit-btn {
+  background-color: var(--edit-blue);
+}
+
+.edit-btn:hover {
+  background-color: var(--edit-blue-hover);
+}
+
+/* Save */
+.save-btn {
+  background-color: var(--success-color);
+}
+
+.save-btn:hover {
+  background-color: #27ae60;
+}
+
+/* Delete */
+.delete-btn {
+  background-color: var(--error-color);
+}
+
+.delete-btn:hover {
+  background-color: #c0392b;
+}
+
+/* Cancel */
+.cancel-btn {
+  background-color: var(--error-color);
+  color: var(--accent-color);
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 1rem;
+}
+
+.cancel-btn:hover {
+  background-color: #c0392b;
+}
+
+/* Update - smaller */
+.update-btn {
+  background-color: var(--success-color);
+  color: var(--accent-color);
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 1rem;
+}
+
+.update-btn:hover {
+  background-color: #27ae60;
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Edit User - RFID Attendance</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <nav>
+    <ul class="nav-bar">
+      <li><a href="/" class="nav-btn">Back to Dashboard</a></li>
+    </ul>
+  </nav>
+
+  <section id="editUser" class="page active edit-style">
+    <h2>Edit User</h2>
+    <form id="editForm">
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="uid">UID</label>
+      <input type="text" id="uid" name="uid" required minlength="6" maxlength="20" pattern="[A-Fa-f0-9]{6,20}" placeholder="E.g., A386FB2">
+
+      <label for="gender">Gender</label>
+      <select id="gender" name="gender" required>
+        <option value="" disabled selected hidden>Select your gender</option>
+        <option value="Male">Male</option>
+        <option value="Female">Female</option>
+        <option value="Other">Other</option>
+      </select>
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required placeholder="user@example.com">
+
+      <label for="phoneNumber">Phone Number</label>
+      <input type="tel" id="phoneNumber" name="phoneNumber" required pattern="^\+63\d{10}$" placeholder="+639XXXXXXXXX">
+
+      <div class="form-actions">
+        <button type="submit" class="update-btn">Update User</button>
+        <button type="button" class="cancel-btn" onclick="window.location.href='/'">Cancel</button>
+      </div>
+    </form>
+  </section>
+
+  <script src="edit.js"></script>
+</body>
+</html>
