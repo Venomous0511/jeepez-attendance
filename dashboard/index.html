@@ -30,7 +30,7 @@
       <label for="name">Name</label>
       <input type="text" name="name" required />
       <label for="uid">UID</label>
-      <input type="text" name="uid" required minlength="6" maxlength="20" pattern="[A-Fa-f0-9]{6,20}"
+      <input type="text" name="uid" required minlength="8" maxlength="20" pattern="[A-Fa-f0-9]{6,20}"
         placeholder="E.g., A386FB2" />
       <label for="gender">Gender</label>
       <select name="gender" id="gender" required style="color:#9aa3b2;"
@@ -178,8 +178,8 @@
         return;
       }
 
-      if (uid.length !== 7) {
-        alert(`UID must be exactly 7 characters long. You entered ${uid.length} characters: "${uid}"`);
+      if (uid.length !== 8) {
+        alert(`UID must be exactly 8 characters long. You entered ${uid.length} characters: "${uid}"`);
         return;
       }
 
